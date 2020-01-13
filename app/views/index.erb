@@ -1,8 +1,8 @@
-<h1>Index Page</h1>
+<h1>Users Index Page</h1>
 
 <% @users.each do |user| %>
   <li>
-    <strong> <%= user["username"] %> </strong>
-    <p><%= user["email"] %></p>
+    <strong> <%= user.name %> </strong>
+    <p><%= user.email %></p>
   </li>
 <% end %>

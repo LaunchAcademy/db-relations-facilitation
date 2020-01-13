@@ -1,8 +1,8 @@
 class User
-  attr_accessor :username, :email
+  attr_accessor :name, :email
 
-  def initialize(username, email)
-    @username = username
+  def initialize(name, email)
+    @name = name
     @email = email
   end
 
@@ -17,9 +17,9 @@ class User
 
     users = []
     user_hashes.each do |user_hash|
-      users << User.new(user_hash["username"], user_hash["email"])
+      users << User.new(user_hash["name"], user_hash["email"])
     end
-    binding.pry
+
     return users
   end
 
