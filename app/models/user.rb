@@ -24,9 +24,9 @@ class User
   end
 
   # def self.create(article_params)
-  #
+  
   # end
-  #
+  
   # def self.find(id)
   #
   # end
