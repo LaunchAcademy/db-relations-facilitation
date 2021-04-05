@@ -23,6 +23,7 @@ end
 def db_connection
   begin
     connection = PG.connect(Sinatra::Application.db_config)
+    # binding.pry
     # connection = PG.connect("users")
     yield(connection)
   ensure
@@ -32,14 +33,18 @@ end
 # this is the method that we will use to executre queries agaisnt our DB
 
 get "/users" do
-  sql_users = nil
+  # sql_users = nil
   
-  db_connection do |connection_object|
-    sql_users = connection_object.exec("SELECT * FROM users;")
-  end
+  # db_connection do |connection_object|
+  #   # binding.pry
+  #   sql_users = connection_object.exec("SELECT * FROM users;")
+  # end
+  # binding.pry
   
-  @users = sql_users.to_a
+  # @users = sql_users.to_a
 
-  # @users = User.all
+  @users = User.all
+
+  # binding.pry
   erb :index
 end
