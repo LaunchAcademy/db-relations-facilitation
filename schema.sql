@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS user_photos;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
-  username VARCHAR(255),
+  name VARCHAR(255),
   email VARCHAR(255) NOT NULL,
   created_at TIMESTAMP,
   updated_at TIMESTAMP
@@ -29,7 +29,7 @@ CREATE TABLE user_photos(
   photo_id INTEGER NOT NULL
 );
 
-INSERT INTO users(username, email, created_at, updated_at)
+INSERT INTO users(name, email, created_at, updated_at)
 VALUES
   ('cornCobbler10', 'corncobbler@corn.com', NOW(), NOW()),
   ('aMazeMe', 'mazesRKewl.maze', NOW(), NOW()),
@@ -52,15 +52,15 @@ VALUES
   (1, 1),
   (2, 2);
 
-  -- SELECT users.username, statuses.body
+  -- SELECT users.name, statuses.body
   -- FROM users JOIN statuses ON users.id = statuses.user_id
   --
-  -- SELECT users.username, users.id, user_photos.user_id, user_photos.photo_id, photos.id, photos.img_src
+  -- SELECT users.name, users.id, user_photos.user_id, user_photos.photo_id, photos.id, photos.img_src
   -- FROM users
   -- JOIN user_photos ON users.id = user_photos.user_id
   -- JOIN photos ON photos.id = user_photos.photo_id;
   -- --
-  -- SELECT users.username, photos.img_src
+  -- SELECT users.name, photos.img_src
   -- FROM users
   -- JOIN user_photos ON users.id = user_photos.user_id
   -- JOIN photos ON photos.id = user_photos.photo_id;
