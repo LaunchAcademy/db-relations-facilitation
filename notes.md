@@ -19,7 +19,8 @@ Before beginning the assignment, make sure you cover the following bullets below
 
 * Who wants to potentially pair program?
 
-### Tips
+## Tips
+
 * Tuesday nights HW will cover how to retrieve a related record based on foreign key e.g. all of the crew-members for a starship. Read ahead if you are done with steps early.
 * You will need to read about flash messages before you are able to efficiently show error and success messages on the page.
 * `pry -r './server.rb'` will allow you to create and query the records in your databse. **You should no longer be using the `psql` command!**
@@ -28,8 +29,8 @@ Before beginning the assignment, make sure you cover the following bullets below
 * `rake db:test:prepare` needs to be run before running your tests but after creating your migrations, in order for your test database to work.
 * AVOID COPY AND PASTE
 
+## One possible Workflow
 
-#### One possible workflow:
 * Create the required path/route and designate an erb template for that path.
 * Determine what table will be needed for that route, and make a migration for it.
 * Create the corresponding Activerecord model

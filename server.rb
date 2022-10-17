@@ -10,13 +10,13 @@ set :bind, '0.0.0.0'  # bind to all interfaces
 set :views, File.join(File.dirname(__FILE__), "app", "views")
 
 configure :development do
-  set :db_config, { dbname: "users" }
+  set :db_config, { dbname: "launcher_users" }
 end
 # points our app at a development version of "users" database when tests are run
 
 
 configure :test do
-  set :db_config, { dbname: "users" }
+  set :db_config, { dbname: "launcher_users" }
 end
 # points our app at a test version of "users" database when tests are run
 
@@ -43,3 +43,14 @@ get "/users" do
   # @users = User.all
   erb :index
 end
+
+# get "/users/:id" do
+#   user = nil
+#   db_connection do |conn|
+#     user = conn.exec_params(
+#         "SELECT * FROM users WHERE users (id) VALUES ($1)",
+#         [params["id"]]
+#       )
+#   end
+#   binding.pry
+# end

@@ -14,12 +14,13 @@ class User
     end
 
     user_hashes = sql_users.to_a
+    # binding.pry
 
     users = []
     user_hashes.each do |user_hash|
       users << User.new(user_hash["name"], user_hash["email"])
     end
-
+    # binding.pry
     return users
   end
 
